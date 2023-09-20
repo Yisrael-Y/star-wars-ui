@@ -1,0 +1,44 @@
+.film-detail {
+    font-family: "Star Jedi", sans-serif;
+    /* background-color: #000; */
+    color: #ffd700;
+    padding: 20px;
+    width: 100%;
+    float: left;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  
+  .film-detail h2 {
+    font-size: 24px;
+  }
+  
+  .film-detail p {
+    font-size: 18px;
+    text-align: justify;
+  }
+  
+  .film-detail button {
+    background-color: #000;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .film-detail button:hover {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  .film-detail .favorite button {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  .film-detail .favorite button:hover {
+    background-color: #000;
+    color: #ffd700;
+  }
