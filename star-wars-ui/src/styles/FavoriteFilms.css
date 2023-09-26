@@ -1,12 +1,12 @@
 /* CSS class for the floating component */
 .hamburger {
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 10;
 }
 
 /* CSS class for the dropdown menu */
@@ -31,34 +31,40 @@
 ul {
     position: absolute;
     top: 100px;
-    right: 0;
-    width: 350px;
-    background-color: rgb(255, 255, 255, 0.8);
-    color: rgb(0, 0, 0);
+    right: 10px;
+    width: 300px;
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
     z-index: 10;
     text-align: center;
     list-style-type: none;
     padding: 10px 0 0 0;
     animation: slideIn 0.5s ease-out;
     animation-fill-mode: forwards; 
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   ul.slideOut {
-    animation: slideOut 0.5s ease-out;
+    animation: slideOut 10s ease-out;
     animation-fill-mode: forwards; 
   }
   
+h3 {
+    text-shadow: none;
+}
 
 li {
   margin-bottom: 15px;
+  text-shadow: none;
+
 }
+
 
 li:hover {
   cursor: pointer;
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 20px rgb(0, 0, 0);
-}
+  text-shadow: 5px 15px 10px rgb(255, 255, 255);
+  transform: translate(0, -5px);}
 
 /* animate ul*/
 @keyframes slideIn {
@@ -76,6 +82,6 @@ li:hover {
     transform: translateX(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(1000%);
   }
 }

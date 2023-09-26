@@ -1,6 +1,8 @@
   .loading {
     margin: 5rem 0;
-    position: relative;
+    position: absolute;
+    left: 42%;
+    top: 30%;
     width: 15rem;
     height: 15rem;
     transform-style: preserve-3d;

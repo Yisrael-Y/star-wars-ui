@@ -2,19 +2,17 @@
 
 .film-detail {
   padding: 20px;
-  width: 100%;
+  width: 90%;
+  min-height: 20rem;
   float: left;
-  height: calc(100vh - 40px);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .selectedFilmDetails {
   display: flex;
-  justify-content: space-around;
-  align-items: space-around;
 }
 
 .film-detail h2 {
@@ -35,7 +33,7 @@
 }
 
 .film-opening-crawl {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .film-detail button {
@@ -45,15 +43,28 @@
   padding: 10px 20px;
   font-size: 1.2rem;
   cursor: pointer;
+  text-shadow: 5px 5px 20px rgb(255, 255, 255);
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: sans-serif;
+  border-radius: 10px;
 }
 
 .film-detail button:hover {
   cursor: pointer;
   background-color: rgb(255, 255, 255);
   color: #000;
-  text-shadow: 0 0 20px rgb(75, 213, 238);
+  box-shadow: 5px 5px 20px rgb(255, 255, 255);
+  transition: color 0.3s, text-shadow 0.3s;
+  transform: translate(0, -5px);
 }
 
+@media screen and (max-width: 650px) {
+  .film-detail {
+    min-height: 55rem; 
+    max-width: 50%;
+  }
+}
 
+@media screen and (max-width: 380px) {
+
+}

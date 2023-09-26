@@ -58,7 +58,7 @@ function App() {
   const handleFavoriteToggle = (film) => {
     // Check if the film is already in favorites
     const isFavorite = favorites.includes(film.episode_id);
-
+    console.log(`isFavorite : ${isFavorite}`);
     if (isFavorite) {
       // Remove the film from favorites
       const updatedFavorites = favorites.filter(
@@ -100,7 +100,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header handleToggleAudio={handleToggleAudio} isPlaying={isPlaying} setShowWelcomePage={ setShowWelcomePage} showWelcomePage={showWelcomePage} favorites={favorites} />
+      <Header handleToggleAudio={handleToggleAudio} isPlaying={isPlaying} setShowWelcomePage={ setShowWelcomePage} showWelcomePage={showWelcomePage} favorites={favorites} handleFilmSelect ={handleFilmSelect } />
       {showWelcomePage ? (
         <WelcomePage setShowWelcomePage={setShowWelcomePage} handleToggleAudio={handleToggleAudio} />
       ) : (

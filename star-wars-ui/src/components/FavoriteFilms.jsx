@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../styles/FavoriteFilms.css";
 
-const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
+const FavoriteFilms = ({ favorites, handleFilmSelect, isLoading }) => {
   const [filmNames, setFilmNames] = useState([]);
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
@@ -19,6 +19,7 @@ const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
       }
 
       const filmNamePromises = favorites.map(async (filmId) => {
+        console.log(`fetching film with ID ${filmId}`);
         try {
           const response = await axios.get(
             `https://swapi.dev/api/films/${filmId}`
@@ -26,7 +27,8 @@ const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
           return response.data;
         } catch (error) {
           console.error(`Error fetching film with ID ${filmId}:`, error);
-          return "Unknown Title"; // Handle the error gracefully
+          return "Unknown Title"; 
+          
         }
       });
 
@@ -57,7 +59,7 @@ const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
         {filmNames.length > 0 ? (
           <>
           
-            <li className="favorite-films-list-item">Favorite films</li>
+            <h3 className="favorite-films-list-header">Favorite films</h3>
             {filmNames.map((film) => (
               <li
                 className="favorite-films-list-item"
@@ -69,9 +71,9 @@ const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
             ))}
           </>
         ) : (
-          <li className="favorite-films-list-item">
-            No favorite films selected.
-          </li>
+          <h3 className="favorite-films-list-item">
+            No favorite films selected
+          </h3>
         )}
       </ul>
     </>

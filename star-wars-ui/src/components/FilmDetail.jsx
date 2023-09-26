@@ -37,7 +37,7 @@ const FilmDetail = ({ selectedFilm, onFavoriteToggle, favorites }) => {
           </button>
         </>
       ) : (
-        <h2>Select a film from the table to see details.</h2>
+        <h2>Select a film from the table to see details</h2>
       )}
     </div>
   );

@@ -7,35 +7,38 @@
   width: 100vw;
   border-bottom: 2px solid #ffffff;
   padding: 0 20px; /* Add padding to adjust spacing */
-    box-shadow: 0 0 20px rgb(223, 208, 208);
+  box-shadow: 0 0 20px rgb(223, 208, 208);
 }
 
 /* Logo Image */
 img {
   height: 6rem;
   background-color: black; /* Removed opacity */
-  margin: 5px;
+  margin: 15px;
 }
 
-
 /* Play Button and About Button */
-.aboutButton, .favorites-hamburger {
+.aboutButton,
+.favorites-hamburger {
   font-size: 1.5rem;
   cursor: pointer;
   transition: text-shadow 0.3s;
 }
 
 .aboutButton {
-  margin-left: 20px;
-  margin-bottom: 30px;
-
-font-weight: 800;}
-
-.favorites-hamburger {
-  margin-right: 20px;
+  position: relative;
+  left: 40px;
+  top: -20px;
+  font-weight: 800;
 }
 
-.aboutButton:hover, .favorites-hamburger {
+.favorites-hamburger {
+position: relative;
+right: 40px;
+}
+
+.aboutButton:hover,
+.favorites-hamburger {
   color: rgb(255, 255, 255);
   cursor: pointer;
   text-shadow: 5px 10px 10px rgb(255, 255, 255);

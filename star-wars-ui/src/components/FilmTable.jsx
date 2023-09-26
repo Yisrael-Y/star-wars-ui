@@ -4,7 +4,7 @@ import "../styles/FilmTable.css";
 const FilmTable = ({ films, handleFilmSelect }) => {
   return (
     <div className="film-table">
-      <h2>Star Wars Films</h2>
+      <h2>Films</h2>
       <div className="film-table table">
 
           {films.map((film) => (
