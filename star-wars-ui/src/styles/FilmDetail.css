@@ -1,44 +1,60 @@
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+
 .film-detail {
-    font-family: "Star Jedi", sans-serif;
-    /* background-color: #000; */
-    color: #ffd700;
-    padding: 20px;
-    width: 100%;
-    float: left;
-    height: calc(100vh - 40px);
-    overflow-y: auto;
-  }
-  
-  .film-detail h2 {
-    font-size: 24px;
-  }
-  
-  .film-detail p {
-    font-size: 18px;
-    text-align: justify;
-  }
-  
-  .film-detail button {
-    background-color: #000;
-    color: #ffd700;
-    border: 1px solid #ffd700;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .film-detail button:hover {
-    background-color: #ffd700;
-    color: #000;
-  }
-  
-  .film-detail .favorite button {
-    background-color: #ffd700;
-    color: #000;
-  }
-  
-  .film-detail .favorite button:hover {
-    background-color: #000;
-    color: #ffd700;
-  }
+  padding: 20px;
+  width: 100%;
+  float: left;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectedFilmDetails {
+  display: flex;
+}
+
+.film-detail h2 {
+  font-size: 2rem;
+}
+
+.film-detail-item {
+  width: 80%;
+  text-align: center;
+  margin: 0 10px 10px 10px;
+}
+
+.film-detail-title {
+  font-size: 1.5rem;
+}
+
+.film-detail-content {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.film-detail button {
+  margin-top: 20px;
+  background-color: #000;
+  color: #f9f7ed;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: sans-serif;
+}
+
+.film-detail button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-shadow: 0 0 20px rgb(75, 213, 238);
+}
+
+

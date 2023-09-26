@@ -1,0 +1,84 @@
+/* CSS class for the floating component */
+.hamburger {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+  position: absolute;
+  top: 70px;
+  right: 100px;
+}
+
+/* CSS class for the dropdown menu */
+.hamburger-line {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.line1 {
+  transform: rotate(45deg);
+}
+
+.line3 {
+  transform: rotate(-45deg);
+  margin-top: 10px;
+}
+
+ul {
+    position: absolute;
+    top: 100px;
+    right: 80px;
+    width: 350px;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px 0 0 0;
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: forwards; /* Add this line */
+  }
+  
+  /* Add a class to trigger the slideOut animation */
+  ul.slideOut {
+    animation: slideOut 0.5s ease-out;
+    animation-fill-mode: forwards; /* Add this line */
+  }
+  
+
+li {
+  margin-bottom: 15px;
+}
+
+li:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+/* animate ul*/
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* animate ul sliding out */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
