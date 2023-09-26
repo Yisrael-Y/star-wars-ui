@@ -1,24 +1,18 @@
 import React from "react";
 import "../styles/FilmTable.css";
 
-const FilmTable = ({ films, onFilmSelect }) => {
+const FilmTable = ({ films, handleFilmSelect }) => {
   return (
     <div className="film-table">
       <h2>Star Wars Films</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div className="film-table table">
+
           {films.map((film) => (
-            <tr key={film.episode_id}>
-              <td onClick={() => onFilmSelect(film)}>{film.title}</td>
-            </tr>
+            <div className="table-row" key={film.episode_id}>
+              <div className="film-row-details" onClick={() => handleFilmSelect(film)}>{film.title}</div>
+            </div>
           ))}
-        </tbody>
-      </table>
+      </div>
     </div>
   );
 };

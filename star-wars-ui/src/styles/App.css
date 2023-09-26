@@ -1,17 +1,34 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+html,
 body {
-    margin: 0;
-    padding: 0;
-    background: url('https://img.freepik.com/premium-vector/abstract-starburst-dynamic-lines-rays_272897-340.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Star Jedi', sans-serif;
-    font-family: 'Star Jedi Hollow', sans-serif;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: url("https://img.freepik.com/premium-vector/abstract-starburst-dynamic-lines-rays_272897-340.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  font-size: 16px;
+
 }
-  
-  .app {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  /* You can replace the background URL with any Star Wars-themed image you prefer. */
-  
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+.mainPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
