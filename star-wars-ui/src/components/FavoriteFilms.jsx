@@ -56,6 +56,7 @@ const FavoriteFilms = ({ favorites, handleFilmSelect }) => {
       <ul className={`hamburger-menu ${hamburgerOpen ? "slideIn" : "slideOut"}`}>
         {filmNames.length > 0 ? (
           <>
+          
             <li className="favorite-films-list-item">Favorite films</li>
             {filmNames.map((film) => (
               <li
