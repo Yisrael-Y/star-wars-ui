@@ -13,6 +13,8 @@
 
 .selectedFilmDetails {
   display: flex;
+  justify-content: space-around;
+  align-items: space-around;
 }
 
 .film-detail h2 {
@@ -22,7 +24,6 @@
 .film-detail-item {
   width: 80%;
   text-align: center;
-  margin: 0 10px 10px 10px;
 }
 
 .film-detail-title {
@@ -30,21 +31,19 @@
 }
 
 .film-detail-content {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-p {
-  font-size: 1.2rem;
-  margin: 10px;
+.film-opening-crawl {
+  font-size: 1.5rem;
 }
 
 .film-detail button {
-  margin-top: 20px;
   background-color: #000;
   color: #f9f7ed;
   border: 1px solid #ffffff;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: sans-serif;

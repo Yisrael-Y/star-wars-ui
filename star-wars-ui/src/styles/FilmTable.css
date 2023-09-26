@@ -1,48 +1,50 @@
-
 .film-table {
-    margin: 0 20px;
-    width: 45%;
-    float: left;
-    height: calc(100vh - 40px);
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ffffff;
-  }
-  
-  .film-table h2 {
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  .film-table .table {
-    width: 100%;
-    justify-content: space-between;
-  }
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #000000;
+  background-color: rgb(172, 198, 211);
+  color: rgb(000, 000, 000 );
+  margin: 20px;
+  box-shadow: 0 0 20px rgb(223, 208, 208);
 
-  .film-table .table-row {
-    font-size: 1.5rem;
-    text-shadow: 0 0 20px rgb(204, 228, 233);
-  }
+}
 
-  .film-row-details {
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.film-table h2 {
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 2px solid #000000;
   
-  .film-table .table-row:hover {
-    cursor: pointer;
-    text-shadow: 5px 15px 10px rgb(75, 213, 238);    
+  
+}
 
-  }
-  
-  .film-table .film-row-detailshover {
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
+.film-table .table {
+  display: flex;
+  width: 100%;
+  border-right: none;
+  box-shadow: none;
 
-  }
-  
+}
 
-  
+.film-table .table-row {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgb(52, 56, 57);
+  transition: color 0.3s, text-shadow 0.3s;
+
+}
+
+.film-row-details {
+  margin-bottom: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  cursor: pointer;
+  text-shadow: 5px 15px 10px rgb(0, 0, 0);
+  transform: translate(0, -5px);
+}
+

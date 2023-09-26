@@ -1,8 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url("https://fonts.cdnfonts.com/css/star-wars");
 html,
 body {
-  width: 100%;
-  height: 100%;
+  width: calc(100dvw - 6px);
+  height: calc(100dvh - 6px);
   letter-spacing: 0.15em;
   color: #ffffff;
   overflow: hidden;
@@ -13,13 +13,11 @@ body {
   background-size: cover;
   font-family: sans-serif;
   font-size: 16px;
-
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  height: 100%;
   overflow: hidden;
   align-items: center;
 }
@@ -28,7 +26,6 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
+  height: 100%;
   justify-content: center;
 }
-

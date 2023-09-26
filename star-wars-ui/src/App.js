@@ -101,9 +101,6 @@ function App() {
   return (
     <div className="app">
       <Header handleToggleAudio={handleToggleAudio} isPlaying={isPlaying} setShowWelcomePage={ setShowWelcomePage} showWelcomePage={showWelcomePage} favorites={favorites} />
-      <span className="favorites-hamburger" >
-        <FavoriteFilms favorites={favorites} handleFilmSelect={handleFilmSelect} />
-      </span>
       {showWelcomePage ? (
         <WelcomePage setShowWelcomePage={setShowWelcomePage} handleToggleAudio={handleToggleAudio} />
       ) : (

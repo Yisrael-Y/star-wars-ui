@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/FilmDetail.css";
 
 const FilmDetail = ({ selectedFilm, onFavoriteToggle, favorites }) => {
   const isFavorite = favorites.some((film) => film === selectedFilm.episode_id);
-  const [showMore, setShowMore] = useState(false);
 
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
-  };
 
   return (
     <div className="film-detail">
@@ -41,7 +37,7 @@ const FilmDetail = ({ selectedFilm, onFavoriteToggle, favorites }) => {
           </button>
         </>
       ) : (
-        <p>Select a film from the table to see details.</p>
+        <h2>Select a film from the table to see details.</h2>
       )}
     </div>
   );
