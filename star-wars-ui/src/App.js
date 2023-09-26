@@ -9,6 +9,7 @@ import StarWarsLoader from "./components/StarWarsLoader";
 import FavoriteFilms from "./components/FavoriteFilms";
 
 function App() {
+  // State variables for managing data and application state
   const [films, setFilms] = useState([]);
   const [selectedFilm, setSelectedFilm] = useState(null);
   const [favorites, setFavorites] = useState([]);
@@ -17,6 +18,7 @@ function App() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // Effect to fetch films from the API on initial render
   useEffect(() => {
     async function fetchFilms() {
       try {
@@ -32,6 +34,7 @@ function App() {
     fetchFilms();
   }, []);
 
+  // Effect to manage audio playback
   useEffect(() => {
     // Event listener to start the animation when the audio ends
     audioRef.current.addEventListener("ended", () => {
@@ -46,15 +49,18 @@ function App() {
     };
   }, []);
 
+  // Effect to save favorites to local storage whenever the favorites list changes
   useEffect(() => {
-    saveFavoritesToLocalStorage(); // Save favorites to localStorage whenever the favorites list changes
+    saveFavoritesToLocalStorage();
     console.log(`favorites updated : ${favorites}}`);
   }, [favorites]);
 
+  // Function to handle film selection
   const handleFilmSelect = (film) => {
     setSelectedFilm(film);
   };
 
+  // Function to toggle a film as a favorite
   const handleFavoriteToggle = (film) => {
     // Check if the film is already in favorites
     const isFavorite = favorites.includes(film.episode_id);
@@ -71,12 +77,12 @@ function App() {
     }
   };
 
-  // Function to save favorites to localStorage
+  // Function to save favorites to local storage
   const saveFavoritesToLocalStorage = () => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   };
 
-  // Function to load favorites from localStorage
+  // Function to load favorites from local storage
   const loadFavoritesFromLocalStorage = () => {
     const storedFavorites = localStorage.getItem("favorites");
     if (storedFavorites) {
@@ -84,6 +90,7 @@ function App() {
     }
   };
 
+  // Function to toggle audio playback
   const handleToggleAudio = () => {
     const audioElement = audioRef.current;
     if (audioElement) {
@@ -100,9 +107,19 @@ function App() {
 
   return (
     <div className="app">
-      <Header handleToggleAudio={handleToggleAudio} isPlaying={isPlaying} setShowWelcomePage={ setShowWelcomePage} showWelcomePage={showWelcomePage} favorites={favorites} handleFilmSelect ={handleFilmSelect } />
+      <Header
+        handleToggleAudio={handleToggleAudio}
+        isPlaying={isPlaying}
+        setShowWelcomePage={setShowWelcomePage}
+        showWelcomePage={showWelcomePage}
+        favorites={favorites}
+        handleFilmSelect={handleFilmSelect}
+      />
       {showWelcomePage ? (
-        <WelcomePage setShowWelcomePage={setShowWelcomePage} handleToggleAudio={handleToggleAudio} />
+        <WelcomePage
+          setShowWelcomePage={setShowWelcomePage}
+          handleToggleAudio={handleToggleAudio}
+        />
       ) : (
         <div className="mainPage">
           {isLoading ? (
@@ -119,7 +136,7 @@ function App() {
           )}
         </div>
       )}
-  
+
       <audio ref={audioRef}>
         <source
           src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.ogg"
@@ -132,7 +149,6 @@ function App() {
       </audio>
     </div>
   );
-  
 }
 
 export default App;
