@@ -1,9 +1,12 @@
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+
 .welcome-body {
     position: relative;
     top: 5rem;
     height: 80vh;
     width: 100%;
-}
+    font-family: 'Star Wars', sans-serif;
+  }
 
 .starwars section {
   position: absolute;
@@ -70,11 +73,11 @@
     opacity: 1;
   }
   50% {
-    opacity: 0;
+    opacity: 1;
     top: 50%;
   }
   100% {
-    top: 1000px;
-    opacity: 1;
+    top: 100px;
+    opacity: 0;
   }
 }

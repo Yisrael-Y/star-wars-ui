@@ -2,27 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../styles/Welcome.css";
 
 const WelcomePage = ({ setShowWelcomePage, handleToggleAudio }) => {
-  const [startCrawl, setStartCrawl] = useState(false);
 
-  const handleStartClick = () => {
-    setStartCrawl(true);
-  };
+
 
 
   return (
     <div className="welcome-body">
     <article className="starwars">
- 
-      {!startCrawl ? (
-        <section className="start">
-          <p>
-          <span className="startButton" onClick={handleStartClick()}>
-              {" "}
-              Let's begin our adventure <br />
-            </span>
-          </p>
-        </section>
-      ) : (
         <div >
           <section className="intro">
             A long time ago, in a galaxy far, far away....
@@ -55,6 +41,9 @@ const WelcomePage = ({ setShowWelcomePage, handleToggleAudio }) => {
               </p>
 
               <p>
+                The hamburger menu on the left is where you will find your favorite films. Click on the hamburger menu to open it and see your favorite films. Click on the hamburger menu again to close it.
+              </p>
+              <p>
                 Thank you for choosing 'The Star Wars API' Movie Selector App.
                 We hope you enjoy exploring the Star Wars universe and selecting
                 your favorite movies with ease! May the Force be with you as you
@@ -63,7 +52,6 @@ const WelcomePage = ({ setShowWelcomePage, handleToggleAudio }) => {
             </div>
           </section>
           </div>
-      )}
     </article>
     </div>
   );

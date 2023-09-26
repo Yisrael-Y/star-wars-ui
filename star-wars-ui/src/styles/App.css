@@ -5,7 +5,7 @@ body {
   height: calc(100dvh - 6px);
   letter-spacing: 0.15em;
   color: #ffffff;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background: url("https://img.freepik.com/premium-vector/abstract-starburst-dynamic-lines-rays_272897-340.jpg")
@@ -18,14 +18,19 @@ body {
 .app {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   align-items: center;
 }
 
 .mainPage {
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
+  height: 75dvh;
+  width: 100dvw;
+}
+
+@media screen and (max-width: 380px) {
+  html,
+  body {
+    font-size: 12px;
+  }
 }
